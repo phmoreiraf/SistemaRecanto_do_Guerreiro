@@ -1,0 +1,9 @@
+const {resolve} = require("path")
+
+
+module.exports = {
+    "config": resolve(__dirname,"config","bd.js"),
+    "models-path": resolve(__dirname,"models"),
+    "migrations-path": resolve(__dirname,"migrations"),
+    "seeders-path": resolve(__dirname,"database","seeds"),
+}

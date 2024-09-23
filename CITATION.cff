@@ -1,0 +1,25 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: Recanto do Guerreiro
+authors:
+  - family-names: Figueiro Galindo
+    given-names: Gabriel Alejandro
+  - family-names: Perez Monteiro
+    given-names: João Gabriel
+  - family-names: Moreira Caixeta Ferreira
+    given-names: Pedro Henrique
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Ishitani
+    given-names: Lucila
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Lúcia da Silva
+    given-names: Soraia
+keywords:
+  - Gerenciamento
+  - Eventos
+repository-code: 
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2024-06-25

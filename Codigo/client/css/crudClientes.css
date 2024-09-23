@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.25rem;
+    background-color: #fff;
+    border-radius: 0.3125rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+}
+
+h1 {
+    margin-bottom: 25px;
+    text-align: center;
+    color: #555555;
+    font-weight: bold;
+}
+
+/* NAVBAR ------------------ */
+nav {
+    background-color: #FFE3D5;
+    color: #fff;
+    padding: 10px 0;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.logout-button {
+    order: 3;
+}
+
+.logout-button button {
+    background-color: #191970;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.logout-button button:hover {
+    background-color: #c82333;
+}
+
+.logo {
+    order: 1;
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.menu {
+    order: 2;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+    padding-left: 20%;
+}
+
+.menu li {
+    margin: 0 5px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+    transition: text-decoration 0.3s;
+    padding: 10px 0;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.linha-vertical {
+    width: 2px;
+    height: 50px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+
+.login-button {
+    text-align: right;
+}
+
+.login-button a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* FORMULARIO ------------------ */
+form label,
+form input,
+form select,
+form textarea {
+    margin-bottom: 10px;
+    /* Adiciona uma margem uniforme na parte inferior de cada elemento */
+}
+
+label,
+input,
+button {
+    display: block;
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button,
+.btn-editar,
+.btn-excluir {
+    padding: 10px 20px;
+    background-color: #191970;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.bi {
+    color: #fff;
+    display: inline-block;
+    vertical-align: -.145em;
+    fill: currentcolor;
+}
+
+.btn-excluir {
+    background-color: #c82333;
+}
+
+.icon-margin {
+    margin-right: 5px;
+    /* Ajuste o valor conforme necessário */
+}
+
+button:hover,
+.btn-editar:hover {
+    background-color: #0056b3;
+}
+
+.btn-excluir:hover {
+    background-color: #a71d2a;
+}
+
+.linha-separadora {
+    width: 90%;
+    /* Responsive width */
+    max-width: 700px;
+    /* Maximum width */
+    margin: 20px auto;
+    border-radius: 10px;
+    border-top: 4px solid black;
+}
+
+.btn-visualizar {
+    display: block;
+    margin: 30px auto 20px;
+    text-align: center;
+}
+
+/*MODAL DE CONFIRMAÇÃO DE CADASTRO*/
+.modal-text {
+    color: #555555;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*TABELA ------------------*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 2px;
+    text-align: center;
+    align-items: center;
+    width: 10%;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
+th:nth-child(4),
+th:nth-child(5) {
+    display: none;
+}
+
+td:nth-child(4),
+td:nth-child(5) {
+    display: none;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.btn-container {
+    display: flex;
+    /* Use flexbox para alinhar os botões lado a lado */
+}
+
+.btn-editar,
+.btn-excluir {
+    padding: 5px;
+    width: 45%;
+    margin: 5px auto;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#mensagemSemItens {
+    text-align: center;
+}
+
+/*MODAL DE CONFIRMAÇÃO*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fundo preto com transparência */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* Centralizar verticalmente, ajuste conforme necessário */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    /* Defina o tamanho do modal, ajuste conforme necessário */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Distância dos botões do texto */
+.modal-content button {
+    margin-top: 10px;
+}
+
+/* FOOTER ------------------ */
+footer {
+    background-color: #FFE3D5;
+    color: #fff;
+    padding: 1.25rem 0;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    max-width: 100px;
+}
+
+.footer-logo p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.footer-address,
+.footer-contact {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-address h3,
+.footer-contact h3,
+.footer-social h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: #fff;
+    margin-top: 5px;
+}
+
+.footer-social a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para telas maiores */
+@media only screen and (min-width: 933px) {
+    .menu {
+        padding-left: 20%;
+    }
+}
+
+/* Estilos para telas entre 845px e 932px */
+@media only screen and (min-width: 845px) and (max-width: 932px) {
+    .menu {
+        padding-left: 17%;
+    }
+}
+
+/* Estilos para telas entre 769px e 844px */
+@media only screen and (min-width: 769px) and (max-width: 844px) {
+    .menu {
+        padding-left: 15%;
+    }
+}
+
+/* Estilos para telas menores */
+@media only screen and (max-width: 768px) {
+    nav {
+        height: auto;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-top: 10px;
+    }
+
+    .logout-button {
+        margin-top: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        padding-left: 0;
+    }
+
+    .menu li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .linha-vertical {
+        display: none;
+    }
+
+    .linha-separadora {
+        width: 90%;
+        max-width: 400px;
+        margin: 20px auto;
+    }
+
+    th:nth-child(3),
+    th:nth-child(4),
+    th:nth-child(5),
+    th:nth-child(6),
+    td:nth-child(3),
+    td:nth-child(4),
+    td:nth-child(5),
+    td:nth-child(6) {
+        display: none;
+    }
+
+    .btn-editar,
+    .btn-excluir {
+        width: 80%;
+        height: 40px;
+    }
+}
+
+/* Ajustes para telas com altura mínima de 1100px */
+@media only screen and (min-height: 1100px) {
+    .container {
+        padding: 2.5rem;
+    }
+
+    form {
+        flex-grow: 1;
+    }
+
+    label,
+    input,
+    button {
+        margin-bottom: 1rem;
+    }
+
+    input[type="text"] {
+        padding: 1rem;
+    }
+
+    button {
+        padding: 1rem 2rem;
+    }
+}
